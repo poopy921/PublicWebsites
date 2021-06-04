@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>I love Great Izuchi</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="contentStyles.css">
+        <script src="contentJavascript.js">
+        </script>
+    </head>
+    <body>
+            <h1>Jerico's image gallery</h1>
+            <center>
+                <img id="mainImage" data-fullSize = "false" class="centerImg bordered"  src="img/0.png" alt="Image failed to load" title="I love izuchi!">
+            </center>
+            <div class="buttonContainers">
+                <img class="buttonImg bordered" title="Click to go left" onclick="goBack()" src="contentImages/arrowButtonLeft.png" alt="Image failed to load">
+                <img class="buttonImg bordered" title="Click to go right" onclick="goForward()" src="contentImages/arrowButton.png" alt="Image failed to load">
+                <p class="bordered" onclick="toggleSize()">Toggle Size</p>
+                <p id="index">0</p>
+            </div>
+    </body>
+</html>

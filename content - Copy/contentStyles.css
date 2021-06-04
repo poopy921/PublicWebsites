@@ -1,0 +1,26 @@
+body{
+    background-color: #3b1850;
+    color: white;
+    font-family: sans-serif;
+}
+h1{
+    text-align: center;
+}
+.bordered{
+    border: 5px solid #6e3f8a;
+}
+.centerImg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 250px;
+}
+.buttonImg{
+    width: 25px;
+    height: auto;
+}
+.buttonContainers{
+    position: absolute;
+    left: 25%;
+}
