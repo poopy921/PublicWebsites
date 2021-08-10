@@ -6,8 +6,8 @@ var descs = {
     "-": "The minus command subtracts 1 to the current array element the pointer is pointing to. If it underflows below 0, the value is set to 255.",
     "<": "The left arrow command moves the pointer 1 to the left.",
     ">": "The right arrow command moves the pointer 1 to the right.",
-    ",": "The comma command takes the current array element's value and turns it into its related ascii character.",
-    ".": "The period command takes input from the user and turns it into its related ascii value.",
+    ".": "The period command takes the current array element's value and turns it into its related ascii character.",
+    ",": "The comma command takes input from the user and turns it into its related ascii value.",
     "[": "The opening bracket command marks as the start of a loop. If the code reaches the related closing bracket while the current array element's value is greater than 0, it loops back to here.",
     "]": "The closing bracket command marks as the end of a loop. If the code reaches it while the current array element's value is greater than 0, it loops back to the related openind bracket."
 };
