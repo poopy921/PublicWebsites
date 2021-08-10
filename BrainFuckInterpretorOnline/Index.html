@@ -34,7 +34,8 @@
                             <h2>What is Brainfuck?</h2>
                             <p>
                                 Brainfuck is an esoteric programming language
-                                that only consists of 8 characters! It is turing
+                                that only consists of 8 characters! Everything 
+                                else is treated like a comment. It is Turing
                                 complete, meaning that you can theoretically
                                 make anything out of it.
                             </p>
@@ -85,6 +86,27 @@
                             id="input"
                             class="txta"
                             wrap="hard"
+                            value="+++++ +++++             initialize counter (cell #0) to 10
+[                       use loop to set 70/100/30/10
+    > +++++ ++              add  7 to cell #1
+    > +++++ +++++           add 10 to cell #2
+    > +++                   add  3 to cell #3
+    > +                     add  1 to cell #4
+<<<< -                  decrement counter (cell #0)
+]
+> ++ .                  print \'H\'
+> + .                   print \'e\'
++++++ ++ .              print \'l\'
+.                       print \'l\'
++++ .                   print \'o\'
+> ++ .                  print \' \'
+<< +++++ +++++ +++++ .  print \'W\'
+> .                     print \'o\'
++++ .                   print \'r\'
+----- - .               print \'l\'
+----- --- .             print \'d\'
+> + .                   print \'!\'
+> .                     print \'eol\'"
                             placeholder="Enter brainfuck code"
                         ></textarea>
                         <br />
