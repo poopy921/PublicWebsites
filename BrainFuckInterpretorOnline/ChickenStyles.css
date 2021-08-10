@@ -104,7 +104,7 @@ td:hover {
     background-color: #8755a3;
 }
 #info-back {
-    position: fixed;
+    position: relative;
     text-align: center;
 }
 #overlay {
