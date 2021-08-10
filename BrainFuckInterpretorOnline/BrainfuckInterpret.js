@@ -9,7 +9,7 @@ var descs = {
     ".": "The period command takes the current cell's value and adds its related ascii character to the output.",
     ",": "The comma command takes input from the user and puts its related ascii value into the current cell.",
     "[": "The opening bracket command marks as the start of a loop. If the code reaches the related closing bracket while the current cell's value is greater than 0, it loops back to here.",
-    "]": "The closing bracket command marks as the end of a loop. If the code reaches it while the current cell's value is greater than 0, it loops back to the related openind bracket."
+    "]": "The closing bracket command marks as the end of a loop. If the code reaches it while the current cell's value is greater than 0, it loops back to the related opening bracket."
 };
 function toByte(input) {
     if (input < 0)
