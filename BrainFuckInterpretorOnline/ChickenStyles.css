@@ -56,6 +56,8 @@ div {
     width: 40%;
 }
 .txta {
+    background-color: #2f1041;
+    color: white;
     width: 100%;
     height: 200px;
     -webkit-box-sizing: border-box;
