@@ -2,14 +2,14 @@ var inputArea = document.getElementById("input");
 var outputArea = document.getElementById("output");
 var state = true;
 var descs = {
-    "+": "The plus command adds 1 to the current array element the pointer is pointing to. If it overflows above 255, the value is reset to 0.",
-    "-": "The minus command subtracts 1 to the current array element the pointer is pointing to. If it underflows below 0, the value is set to 255.",
+    "+": "The plus command adds 1 to the current cell the pointer is pointing to. If it overflows above 255, the value is reset to 0.",
+    "-": "The minus command subtracts 1 to the current cell the pointer is pointing to. If it underflows below 0, the value is set to 255.",
     "<": "The left arrow command moves the pointer 1 to the left.",
     ">": "The right arrow command moves the pointer 1 to the right.",
-    ".": "The period command takes the current array element's value and turns it into its related ascii character.",
-    ",": "The comma command takes input from the user and turns it into its related ascii value.",
-    "[": "The opening bracket command marks as the start of a loop. If the code reaches the related closing bracket while the current array element's value is greater than 0, it loops back to here.",
-    "]": "The closing bracket command marks as the end of a loop. If the code reaches it while the current array element's value is greater than 0, it loops back to the related openind bracket."
+    ".": "The period command takes the current cell's value and adds its related ascii character to the output.",
+    ",": "The comma command takes input from the user and puts its related ascii value into the current cell.",
+    "[": "The opening bracket command marks as the start of a loop. If the code reaches the related closing bracket while the current cell's value is greater than 0, it loops back to here.",
+    "]": "The closing bracket command marks as the end of a loop. If the code reaches it while the current cell's value is greater than 0, it loops back to the related openind bracket."
 };
 function toByte(input) {
     if (input < 0)
