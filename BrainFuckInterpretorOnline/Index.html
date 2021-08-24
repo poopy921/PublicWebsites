@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8" />
+        <title>CWBF - Chicken's Wonderful Brainfuck Interpretor</title>
+        <link rel="stylesheet" href="ChickenStyles.css" />
+    </head>
+    <body>
+        <div id="info-overlay">
+            <div class="overlay centered"></div>
+            <div class="bordered centered" id="info-container">
+                <h2 id="info-title" class="text-center">special message</h2>
+                <p id="info-desc" class="margin5">
+                    this is a special description that is used for special
+                    messages (roll credits)
+                </p>
+                <h2
+                    id="info-back"
+                    class="bordered unselectable butt"
+                    onclick="hidePopup()"
+                >
+                    Go back
+                </h2>
+            </div>
+        </div>
+        <div class="margin5">
+            <center>
+                <h1>
+                    Welcome,<br />
+                    To my Brainfuck interpretor!
+                </h1>
+            </center>
+            <section>
+                <article>
+                    <div class="bordered leftArticle">
+                        <div class="margin5">
+                            <h2>What is Brainfuck?</h2>
+                            <p>
+                                Brainfuck is an esoteric programming language
+                                that only consists of 8 characters! Everything
+                                else is treated like a comment. It is Turing
+                                complete, meaning that you can theoretically
+                                make anything out of it.
+                            </p>
+                            <hr />
+                            <h2>How does it work?</h2>
+                            <p>
+                                Imagine that you're operating an infinitely long
+                                array of cells, with a pointer indicating where
+                                operations take place. These characters revolve
+                                around adding and subtracting from the cells,
+                                getting input and output, looping, and moving
+                                around the pointer.<br />
+                                You can look into each character below to get
+                                more details.
+                            </p>
+                            <hr />
+                            <h2>What characters does it have?</h2>
+                            <p>
+                                Brainfuck's characters are + - , . &lt; &gt; [
+                                ]<br />
+                                This table contains what each character does.<br />
+                                Click on them to get info!
+                            </p>
+                            <table
+                                cellpadding="10"
+                                cellspacing="10"
+                                unselectable="on"
+                                class="marginauto unselectable"
+                            >
+                                <tr class="button">
+                                    <td onclick="showPopup('+')">+</td>
+                                    <td onclick="showPopup('-')">-</td>
+                                    <td onclick="showPopup(',')">,</td>
+                                    <td onclick="showPopup('.')">.</td>
+                                    <td onclick="showPopup('<')">&lt;</td>
+                                    <td onclick="showPopup('>')">&gt;</td>
+                                    <td onclick="showPopup('[')">[</td>
+                                    <td onclick="showPopup(']')">]</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="bordered rightArticle">
+                        <h2>Put code here!</h2>
+                        <textarea
+                            id="input"
+                            class="txta"
+                            wrap="hard"
+                            placeholder="Enter brainfuck code"
+                            onchange="updateInCharCount()"
+                            onload="updateInCharCount()"
+                        >
++++++ +++++             initialize counter (cell #0) to 10
+[                       use loop to set 70/100/30/10
+    &gt; +++++ ++              add  7 to cell #1
+    &gt; +++++ +++++           add 10 to cell #2
+    &gt; +++                   add  3 to cell #3
+    &gt; +                     add  1 to cell #4
+&lt;&lt;&lt;&lt; -                  decrement counter (cell #0)
+]
+&gt; ++ .                  print \'H\'
+&gt; + .                   print \'e\'
++++++ ++ .              print \'l\'
+.                       print \'l\'
++++ .                   print \'o\'
+&gt; ++ .                  print \' \'
+&lt;&lt; +++++ +++++ +++++ .  print \'W\'
+&gt; .                     print \'o\'
++++ .                   print \'r\'
+----- - .               print \'l\'
+----- --- .             print \'d\'
+&gt; + .                   print \'!\'
+&gt; .                     print \'eol\'</textarea
+                        >
+                        <br />
+                        <button onclick="interpret()">Interpret!</button>
+                        <button onclick="newMsgToBf()">
+                            Convert message to bf!
+                        </button>
+                        <p>Character Count: <p id="inputCharCount"></p></p>
+                        <h2>Output</h2>
+                        <textarea
+                            id="output"
+                            class="txta"
+                            wrap="hard"
+                            placeholder="Output"
+                            readonly="true"
+                            onchange="updateOutCharCount()"
+                            onload="updateOutCharCount()"
+                            ></textarea>
+                        <p>Character Count: <p id="outputCharCount"></p></p>
+                        </div>
+                </article>
+            </section>
+        </div>
+        <script type="text/javascript" src="BrainfuckInterpret.js"></script>
+    </body>
+</html>
