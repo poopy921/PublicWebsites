@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8" />
+        <title>Logic Printer</title>
+        <link rel="stylesheet" href="ChickenStyles.css" />
+    </head>
+    <body>
+        <div id="info-overlay">
+            <div class="overlay centered"></div>
+            <div class="bordered centered" id="info-container">
+                <h2 id="info-title" class="text-center">Welcome!</h2>
+                <p id="info-desc" class="margin5">
+                    This website is used to make logical equations easier to write, less copy-pasting needed!
+                </p>
+                <h2
+                    id="info-back"
+                    class="bordered unselectable butt"
+                    onclick="hidePopup()"
+                >
+                    Go back
+                </h2>
+            </div>
+        </div>
+        <div class="margin5">
+            <h1 class="text-center">
+                Welcome,<br />
+                To my Logic Printer!
+            </h1>
+            <section>
+                <article>
+                    <div class="bordered leftArticle">
+                        <div class="margin5">
+                            <h2>What is this website for?</h2>
+                            <p>
+                                Logical equations usually have many special symbols,
+                                like → for conditional statement, ↔ for biconditional statement, ∨ for or statement, etc.
+                                These symbols are usually not found on keyboard, and you would typically 
+                                have to rely on remembering obscure alt codes or installing heavy software with strange names for characters.<br><br>
+                                This website plans to fix that!
+                            </p>
+                            <hr />
+                            <h2>How does it work?</h2>
+                            <p>
+                                This website uses Regex to convert statements like "AND", "OR", "THEN", "IFF", "EQUALS", "FOR EVERY", "FOR SOME" into their respective logical symbols.
+                                If you do not want statements to be converted, just put an escape character before it (Example: \AND) (Might not work for Safari Browser). This makes converter ignore the escaped word.<br><br>
+                                <b><i>Remember that the word shortcuts for the statements have to be in all capital letters to be converted!</i></b><br><br>
+                                There are also typable alternate symbols for them too, some of which are common in many programming languages like "&&" for AND
+                            </p>
+                            <hr />
+                            <h2>What are the conversion symbols?</h2>
+                            <p>
+                                The symbols are ∧ ∨ ¬ → ↔ ≡ ∀ ∃<br />
+                                This table contains what each character does. Their word shortcuts are all capitalized<br />
+                                Click on them to get info!
+                            </p>
+                            <table
+                                cellpadding="10"
+                                cellspacing="10"
+                                unselectable="on"
+                                class="marginauto unselectable"
+                            >
+                                <tr class="button">
+                                    <td onclick="showPopup('-and')">∧</td>
+                                    <td onclick="showPopup('-or')">∨</td>
+                                    <td onclick="showPopup('-not')">¬</td>
+                                    <td onclick="showPopup('-then')">→</td>
+                                    <td onclick="showPopup('-iff')">↔</td>
+                                    <td onclick="showPopup('-equals')">≡</td>
+                                    <td onclick="showPopup('-all')">∀</td>
+                                    <td onclick="showPopup('-exists')">∃</td>
+                                    <td onclick="showPopup('-symbolshort')">Symbol Shortcuts</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="bordered rightArticle">
+                        <h2>Put text here!</h2>
+                        <textarea
+                            id="input"
+                            class="txta"
+                            wrap="hard"
+                            placeholder="Enter logic statement"
+                            onchange="updateInCharCount()"
+                            onload="updateInCharCount()"
+                        >(p AND q ORz) THEN NOT r
+ALL x P(x)
+EXISTS x Q(x)
+FOR EVERY x P(x)
+FOR SOME x Q(x)
+p IFF q EQUALS NOT p IFF NOT q
+~z-&gt;(p&&q)
+(~p||q)&&(~q||p)==p&lt;-&gt;q
+~qAx(P(x)&&~Q(x))==qE(~P(x)||Q(x))</textarea>
+                        <br />
+                        <button onclick="wordsToLogic()">Convert to Logic!</button>
+                        <button onclick="wordsToLogicSa()">Convert to Logic! (Safari Version)</button>
+                        <!--
+                            <button onclick="logicToWords()">
+                            Convert Logic to words!
+                        </button>
+                    -->
+                        <p>Character Count: <p id="inputCharCount"></p></p>
+                        <h2>Output</h2>
+                        <textarea
+                            id="output"
+                            class="txta"
+                            wrap="hard"
+                            placeholder="Output"
+                            readonly="true"
+                            onchange="updateOutCharCount()"
+                            onload="updateOutCharCount()"
+                            ></textarea>
+                        <p>Character Count: <p id="outputCharCount"></p></p>
+                        </div>
+                </article>
+            </section>
+        </div>
+        <div class="faded">By Jerico Bote</div>
+        <script type="text/javascript" src="LogicPrint.js"></script>
+    </body>
+</html>
