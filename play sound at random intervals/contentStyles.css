@@ -1,0 +1,57 @@
+body {
+    background-color: #3b1850;
+    color: white;
+    font-family: sans-serif;
+}
+h1 {
+    text-align: center;
+}
+.bordered {
+    border: 5px solid #6e3f8a;
+}
+.centerImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 250px;
+}
+.buttonImg {
+    width: 25px;
+    height: auto;
+}
+.buttonContainers {
+    display:flex;
+    flex-direction: column;
+    align-content: flex-start;
+    width: 50%;
+    height: min-content;
+    left: 25%;
+}
+
+.formContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.formContainer p {
+    margin: 0; /* remove default margin to prevent extra height */
+    line-height: 1.2; /* adjust to reduce height if needed */
+}
+
+.hbox {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+}
+
+.vbox {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+.box {
+    margin-left: 5%;
+    margin-right: 5%;
+}
