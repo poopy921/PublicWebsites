@@ -43,3 +43,49 @@
         <script src="contentJavascript.js"></script>
     </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Silence interrupted by sound player</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="contentStyles.css" />
+    </head>
+    <body>
+        <h1>Silence interrupted by sound player</h1>
+        <div class="box">
+            <p>Put in the soundfiles you want to include in the pool.</p>
+            <p>The website will then pick one of these sounds to play after a certain amount of time passes.</p>
+            <div class="buttonContainers">
+                <div>
+                    <input type="file" id="fileInput" accept="audio/*" multiple>
+                    <input type="button" id="clearButton" value="Clear pool">
+                </div>
+            </div>
+            <br>
+            <div class="buttonContainers">
+                <div class="formContainer">
+                    <p>minimum silence time</p>
+                    <input type="number" id="minInterval" value = 30>
+                </div>
+                <br>
+                <div class="formContainer">
+                    <p>maximum silence time</p>
+                    <input type="number" id="maxInterval" value = 100>
+                </div>
+                <br>
+                <div class="formContainer">
+                        <p id="updateNotifier"></p>
+                        <input type="button" value="Update Intervals" id="submitIntervals">
+                </div>
+            </div>
+            <br>
+            <p>Current silence intervals:</p>
+            <p>Current loaded files:</p>
+            <div class="vbox" id="filePoolDisplay">
+
+            </div>
+        </div>
+        <script src="contentJavascript.js"></script>
+    </body>
+</html>
