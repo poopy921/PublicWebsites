@@ -14,6 +14,7 @@
                 <div>
                     <input type="file" id="fileInput" accept="audio/*" multiple>
                     <input type="button" id="clearButton" value="Clear pool">
+                    <input type="button" id="loadSamplesButton" value="Load sample sounds">
                 </div>
             </div>
             <br>
@@ -30,6 +31,7 @@
                 <br>
                 <div class="formContainer">
                         <p id="updateNotifier"></p>
+                        <p id="playNotifier">Scheduler is NOT active</p>
                         <input type="button" value="Update Intervals" id="submitIntervals">
                 </div>
             </div>
@@ -40,6 +42,12 @@
 
             </div>
         </div>
-        <script src="contentJavascript.js"></script>
     </body>
+    <footer class="foot">
+        <div>
+            <img src="contentSamples/lovable.png" id="cute" title="this resets the file pool and intervals btw" class="bordered foot-image"/>
+            <p>Play the The Cruel King and the Great Hero!</p>
+        </div>
+    </footer>
+    <script src="contentJavascript.js"></script>
 </html>
