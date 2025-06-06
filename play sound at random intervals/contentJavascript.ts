@@ -138,7 +138,7 @@ cuteElement.addEventListener("click", async () => {
 });
 
 cuteElement.addEventListener("mouseenter", () => {
-    cuteElement.src = "contentSamples/extra lovable.png";
+    cuteElement.src = "contentSamples/very extra super lovable.png";
 });
 
 cuteElement.addEventListener("mouseleave", () => {
